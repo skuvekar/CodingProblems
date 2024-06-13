@@ -1,3 +1,5 @@
+//code to reverse the binary array of int datatype and store the reversed bits of the array in an int variable
+
 public class BinaryArrayReverseStoreinInt {
 
     public static void main(String[] args) {
