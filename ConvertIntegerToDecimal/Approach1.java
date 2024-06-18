@@ -1,19 +1,20 @@
-public class Approach1 {
+public class test {
 
-    public static int binaryArray[] = new int[1000];
-    public static int n;
+    public static long binaryArray[] = new long[1000];
+    public static long n;
 
-    public static void convertToInt(int array[]) {
+    public static void convertToInt(long array[]) {
         String b = "0b";
         for (int i = 0; i < array.length; i++) {
             b = b+String.valueOf(array[i]);
         }
-        n=Integer.parseInt(Integer.toBinaryString(n));
+        n=Long.parseLong(Long.toBinaryString(n));
     }
 
-    public static void reverseIntArray(int array[]) {
+    public static void reverseIntArray(long array[]) {
         binaryArray = array;
-        int temp, i = 0, left = 0, right;
+        long temp, i = 0;
+        int left = 0, right;
         right = binaryArray.length - 1 - left;
         while (left < right) {
             temp = binaryArray[left];
@@ -23,15 +24,15 @@ public class Approach1 {
         }
         System.out.println();
         System.out.println("Reversed array");
-        for (int j = 0; j < binaryArray.length; j++) {
+        for (int j = 0; j <binaryArray.length; j++) {
             System.out.print(binaryArray[j] + " ");
         }
         System.out.println();
     }
 
-    public static void convertDecimalToBinary(int n) {
+    public static void convertDecimalToBinary(long n) {
 
-        int a = n;
+        long a = n;
 
         int i = 0;
         while (a > 0) {
@@ -52,7 +53,7 @@ public class Approach1 {
 
     public static void main(String[] args) {
 
-        n = 10;
+        n = 14;
         System.out.println("Value of n before conversion: ");
         System.out.println("n: " + n);
         System.out.println();
@@ -62,7 +63,7 @@ public class Approach1 {
         System.out.println("Value of n after conversion: ");
         System.out.println("n: " + n);
         System.out.println();
-
+        
     }
 
 }
