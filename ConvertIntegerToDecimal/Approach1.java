@@ -67,3 +67,22 @@ public class test {
     }
 
 }
+
+
+
+
+output:
+run:
+Value of n before conversion: 
+n: 14
+
+Binary Array before reversal: 
+0 1 1 1 
+
+Reversed array
+1 0 1 1 
+
+Value of n after conversion: 
+n: 1110
+
+BUILD SUCCESSFUL (total time: 0 seconds)
