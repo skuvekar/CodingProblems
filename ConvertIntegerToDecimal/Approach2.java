@@ -3,7 +3,7 @@
  * @author shruti.kuvekar
  */
 public class Approach2 {
-
+ 
     public static long n;
 
     public static void convertDecimalToBinary(long a) {
