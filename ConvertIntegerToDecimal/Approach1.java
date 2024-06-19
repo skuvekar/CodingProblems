@@ -1,30 +1,35 @@
-public class test {
+/**
+ *
+ * @author shruti.kuvekar
+ */
+public class Approach1 {
 
     public static long binaryArray[] = new long[1000];
     public static long n;
 
     public static void convertToInt(long array[]) {
-        String b = "0b";
+        String b = "";
         for (int i = 0; i < array.length; i++) {
-            b = b+String.valueOf(array[i]);
+            b = b + String.valueOf(array[i]);
         }
-        n=Long.parseLong(Long.toBinaryString(n));
+        n = Long.parseLong(b);
     }
 
     public static void reverseIntArray(long array[]) {
         binaryArray = array;
         long temp, i = 0;
-        int left = 0, right;
-        right = binaryArray.length - 1 - left;
+        int left = 0, right = binaryArray.length - 1;
         while (left < right) {
             temp = binaryArray[left];
             binaryArray[left] = binaryArray[right];
             binaryArray[right] = temp;
             left++;
+            right = right - left;
+
         }
         System.out.println();
         System.out.println("Reversed array");
-        for (int j = 0; j <binaryArray.length; j++) {
+        for (int j = 0; j < binaryArray.length; j++) {
             System.out.print(binaryArray[j] + " ");
         }
         System.out.println();
@@ -40,7 +45,7 @@ public class test {
             a = a / 2;
             i++;
         }
-        
+
         System.out.println("Binary Array before reversal: ");
         for (int k = 0; k < i; k++) {
             System.out.print(binaryArray[k] + " ");
@@ -53,7 +58,7 @@ public class test {
 
     public static void main(String[] args) {
 
-        n = 14;
+        n = 9;
         System.out.println("Value of n before conversion: ");
         System.out.println("n: " + n);
         System.out.println();
@@ -63,7 +68,7 @@ public class test {
         System.out.println("Value of n after conversion: ");
         System.out.println("n: " + n);
         System.out.println();
-        
+
     }
 
 }
@@ -71,18 +76,19 @@ public class test {
 
 
 
+
 output:
 run:
 Value of n before conversion: 
-n: 14
+n: 9
 
 Binary Array before reversal: 
-0 1 1 1 
+1 0 0 1 
 
 Reversed array
-1 0 1 1 
+1 0 0 1 
 
 Value of n after conversion: 
-n: 1110
+n: 1001
 
 BUILD SUCCESSFUL (total time: 0 seconds)
