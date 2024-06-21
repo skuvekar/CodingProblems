@@ -3,7 +3,7 @@
  *
  * @author shruti.kuvekar
  */
-public class test {
+public class Approach5 {
 
     public static long n;
     public static long binaryArray[] = new long[32];
