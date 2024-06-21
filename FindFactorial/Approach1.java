@@ -10,7 +10,7 @@ public class Approach1 {
              fact*=a;
              a--;
         }
-        return fact;
+        return fact; 
     }
 
     public static void main(String[] args) {
