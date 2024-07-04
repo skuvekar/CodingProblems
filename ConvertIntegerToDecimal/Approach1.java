@@ -1,3 +1,4 @@
+//Version 1.0
 /**
  *
  * @author shruti.kuvekar
@@ -73,10 +74,6 @@ public class Approach1 {
 
 }
 
-
-
-
-
 output:
 run:
 Value of n before conversion: 
@@ -92,3 +89,55 @@ Value of n after conversion:
 n: 1001
 
 BUILD SUCCESSFUL (total time: 0 seconds)
+
+
+//Improvements version 1.1:
+/**
+ *
+ * @author shruti.kuvekar
+ */
+public class test {
+
+    public static long n;
+    public static long binaryArray[] = new long[1000];
+
+    public static void changeToOriginalVariable(long array[]) {
+        binaryArray = array;
+        String b = "";
+        for (int i = binaryArray.length-1; i >= 0; i--) {
+            b = b+String.valueOf(binaryArray[i]);
+        }
+        n = Long.parseLong(b);
+    }
+
+    public static void convertIntegerToDecimal(long n) {
+        int i = 0;
+        while (n != 0) {
+            binaryArray[i] = n % 2;
+            n = n / 2;
+            i++;
+        }
+        
+        changeToOriginalVariable(Arrays.copyOf(binaryArray, i));
+    }
+
+    public static void main(String[] args) {
+        n = 8;
+        System.out.println();
+        System.out.println("Value of n before conversion: "+n);
+        System.out.println();
+        convertIntegerToDecimal(n);
+        System.out.println("Value of n after conversion: "+n);
+        System.out.println();
+    }
+}
+
+//output:
+run:
+
+Value of n before conversion: 8
+
+Value of n after conversion: 1000
+
+BUILD SUCCESSFUL (total time: 0 seconds)
+
