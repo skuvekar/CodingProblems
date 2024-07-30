@@ -1,5 +1,6 @@
 //TimeComplexity On^2
-//PascalTriangle simple approach
+//PascalTriangle binomial Coefficient approach
+//Each number in the triangle is calculated and printed using the formula (i – j) / (j + 1), where i is the row number and j is the column number.
 public class Approach1 {
     
     public static void pascal(int rows){
