@@ -3,9 +3,10 @@
 //nCr=n!/((n-r)!*r!)
 public class Approach2 {
 
-    public static int factorial(int num) {
-        int fact = 1;
-        if (num == 0) {
+    //dataype changed from int to long to be able to calculate for large numbers
+    public static long factorial(long num) {
+        long fact = 1;
+        if (long == 0) {
             return 1;
         }
         return num * factorial(num - 1);
