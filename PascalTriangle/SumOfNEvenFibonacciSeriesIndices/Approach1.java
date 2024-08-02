@@ -1,5 +1,5 @@
 //Finding sum of first n even indices in the Fibonacci series
-
+//Time Complexity: O(n)
 public class Approach1 {
 
     public static int fibonacci(int n) {
